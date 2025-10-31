@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "title": "อบรม CPR",
+    "description": "การฝึกอบรมการช่วยชีวิตขั้นพื้นฐาน",
+    "image": "/uploads/activities/1727923719273-activity1.jpg"
+  },
+  {
+    "id": 2,
+    "title": "วันมะเร็งโลก",
+    "description": "ให้ความรู้สื่อสารการป้องกันโรคมะเร็ง",
+    "image": "/uploads/activities/1727923748271-activity2.png"
+  }
+]

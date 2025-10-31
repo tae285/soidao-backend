@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "name": "ผู้บริจาค A",
+    "amount": 5000,
+    "item": "",
+    "date": "2025-10-06",
+    "image": "/uploads/donors/a.jpg"
+  },
+  {
+    "id": 2,
+    "name": "ผู้บริจาค B",
+    "amount": 2000,
+    "item": "หน้ากากอนามัย 5 กล่อง",
+    "date": "2025-10-05",
+    "image": "/uploads/donors/b.jpg"
+  }
+]
