@@ -146,4 +146,5 @@ router.delete("/:id", async (req, res) => {
 });
 
 // ✅ export แบบใหม่
-export default router;
+export { router as newsRouter };
+

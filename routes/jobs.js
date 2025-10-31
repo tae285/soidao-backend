@@ -96,4 +96,5 @@ router.delete("/:id", (req, res) => {
 })
 
 // ✅ export แบบใหม่
-export default router
+export { router as jobsRouter };
+

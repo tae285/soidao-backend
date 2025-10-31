@@ -96,4 +96,5 @@ router.delete("/:id", (req, res) => {
   res.json({ message: "ลบผู้บริจาคสำเร็จ", success: true })
 })
 
-export default router
+export { router as donateRouter }
+

@@ -113,4 +113,5 @@ router.delete("/:id", (req, res) => {
   res.json({ success: true, removed });
 });
 
-export default router;
+export { router as staffRouter };
+

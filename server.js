@@ -9,20 +9,29 @@ import pool from "./config/db.js";
 // โหลดค่า .env
 dotenv.config();
 
-// 📌 import routes (統一ให้ใช้ default export)
-import authRouter from "./routes/auth.js";
-import jobsRouter from "./routes/jobs.js";
-import newsRouter from "./routes/news.js";
-import activitiesRouter from "./routes/activities.js";
-import staffRouter from "./routes/staff.js";
-import downloadsRouter from "./routes/downloads.js";
-import procurementRouter from "./routes/procurement.js";
-import uploadRouter from "./routes/upload.js";
-import donateRouter from "./routes/donate.js";
-import itaRouter from "./routes/ita.js";
+// 📌 import routes (統一ให้ใช้ named export)
+import { authRouter } from "./routes/auth.js";
+import { jobsRouter } from "./routes/jobs.js";
+import { newsRouter } from "./routes/news.js";
+import { activitiesRouter } from "./routes/activities.js";
+import { staffRouter } from "./routes/staff.js";
+import { downloadsRouter } from "./routes/downloads.js";
+import { procurementRouter } from "./routes/procurement.js";
+import { uploadRouter } from "./routes/upload.js";
+import { donateRouter } from "./routes/donate.js";
+import { itaRouter } from "./routes/ita.js";
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: [
+    "http://localhost:5173",       // ✅ frontend dev
+    "https://*.trycloudflare.com", // ✅ ถ้าคุณใช้ Cloudflare tunnel
+    "https://www.soidao.go.th"     // ✅ ถ้าในอนาคตเชื่อมกับเว็บจริง
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
+
 app.use(express.json());
 
 // ✅ ทดสอบเชื่อมต่อ MySQL

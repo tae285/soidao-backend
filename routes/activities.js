@@ -166,4 +166,4 @@ router.delete("/:id", adminGuard, (req, res) => {
   res.json({ message: "ลบกิจกรรมสำเร็จ", success: true })
 })
 
-export default router
+export { router as activitiesRouter };
